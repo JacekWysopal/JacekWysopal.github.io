@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jacek Wysopal - szkolenia z Business Intelligence, SQL, Power BI, Tableau." />
+  <title>Jacek Wysopal | BI Training & Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #111;
+      color: #eee;
+      transition: all 0.3s ease;
+    }
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #fff;
+    }
+    header h1 span {
+      color: #00b3ff;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .cta {
+      margin-top: 2rem;
+      display: inline-block;
+      background: #00b3ff;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta:hover {
+      background: #008ecc;
+    }
+    .language-switch {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .language-switch button {
+      background: #333;
+      border: none;
+      color: #ccc;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      padding: 3rem 2rem;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    footer a {
+      color: #aaa;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switch">
+    <button onclick="setLanguage('pl')">PL</button>
+    <button onclick="setLanguage('en')">EN</button>
+  </div>
+  <header>
+    <h1>Jacek Wysopal <span>BI</span></h1>
+    <p class="subtitle" data-lang-pl="Business Intelligence dla profesjonalistów" data-lang-en="Business Intelligence for professionals"></p>
+    <a class="cta" href="https://calendar.google.com/calendar/u/0/r" target="_blank" data-lang-pl="Umów się" data-lang-en="Schedule">Umów się</a>
+  </header>
+
+  <section id="pl" class="active">
+    <h2>O mnie</h2>
+    <p>Nazywam się Jacek. Od ponad X lat jestem deweloperem i szkoleniowcem Business Intelligence specjalizującym się w SQL, raportowaniu BI, oraz wizualizacji danych.</p>
+    <h2>Zakres szkoleń</h2>
+    <ul>
+      <li>SQL od podstaw do poziomu zaawansowanego</li>
+      <li>Dashboardy i raporty w Power BI, Tableau</li>
+      <li>Projektowanie procesów ETL</li>
+      <li>Konsultacje BI dla firm</li>
+    </ul>
+    <h2>Kontakt</h2>
+    <p>Wybierz dogodny termin – pierwsza konsultacja gratis!</p>
+    <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Zarezerwuj przez Google Calendar</a>
+  </section>
+
+  <section id="en">
+    <h2>About Me</h2>
+    <p>My name is Jacek. I’ve been a Business Intelligence developer and trainer specializing in SQL, BI reporting, and data visualization for over X years.</p>
+    <h2>Training Offerings</h2>
+    <ul>
+      <li>SQL from beginner to advanced</li>
+      <li>Reports and dashboards in Power BI, Tableau</li>
+      <li>ETL process design</li>
+      <li>BI consulting for companies</li>
+    </ul>
+    <h2>Contact</h2>
+    <p>Choose a convenient time – first consultation is free!</p>
+    <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book via Google Calendar</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jacek Wysopal</p>
+    <p>
+      <a href="mailto:jacek@example.com">jacek@example.com</a> |
+      <a href="https://linkedin.com/in/jacek-wysopal">LinkedIn</a> |
+      <a href="https://github.com/wysopal">GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.getElementById('pl').classList.remove('active');
+      document.getElementById('en').classList.remove('active');
+      document.getElementById(lang).classList.add('active');
+
+      document.querySelectorAll('[data-lang-pl]').forEach(el => {
+        el.textContent = lang === 'pl' ? el.getAttribute('data-lang-pl') : el.getAttribute('data-lang-en');
+      });
+    }
+    setLanguage('pl');
+  </script>
+</body>
+</html>
