@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jacek Wysopal - szkolenia z Business Intelligence, SQL, Power BI, Tableau." />
+  <meta name="description" content="Jacek Wysopal - konsultacje Business Intelligence" />
   <title>Jacek Wysopal | BI Training & Consulting</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -84,47 +84,163 @@
     <button onclick="setLanguage('en')">EN</button>
   </div>
   <header>
-    <h1>Jacek Wysopal <span>BI</span></h1>
-    <p class="subtitle" data-lang-pl="Business Intelligence dla profesjonalistów" data-lang-en="Business Intelligence for professionals"></p>
-    <a class="cta" href="https://calendar.google.com/calendar/u/0/r" target="_blank" data-lang-pl="Umów się" data-lang-en="Schedule">Umów się</a>
+    <h1>Jacek Wysopal</h1>
+    <p class="subtitle" data-lang-pl="Business Intelligence - treningi i konsultacje" data-lang-en="Business Intelligence - trainings & consultations"></p>
+	
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ30pBY4fFMoTih84yLMgh7on1Cm_zjn-7RcU2ig7nvi7tT4uTd-P6vGTL5UtPbRB6wyc_T7Fshb?gv=true',
+      color: '#0e5071',
+      label: 'Zarezerwuj spotkanie',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
   </header>
 
   <section id="pl" class="active">
     <h2>O mnie</h2>
-    <p>Nazywam się Jacek. Od ponad X lat jestem deweloperem i szkoleniowcem Business Intelligence specjalizującym się w SQL, raportowaniu BI, oraz wizualizacji danych.</p>
+    <p>Jestem doświadczonym specjalistą Business Intelligence z pasją do automatyzacji, integracji danych oraz nowoczesnych rozwiązań analitycznych. Od lat rozwijam systemy raportowe, integruję dane i prowadzę szkolenia z obszaru Business Intelligence i analizy danych. Cenię sobie efektywną współpracę, a także samodzielność w rozwiązywaniu złożonych problemów analitycznych.</p>
     <h2>Zakres szkoleń</h2>
     <ul>
       <li>SQL od podstaw do poziomu zaawansowanego</li>
-      <li>Dashboardy i raporty w Power BI, Tableau</li>
-      <li>Projektowanie procesów ETL</li>
+      <li>Dashboardy i raporty w Tableau</li>
+      <li>Projektowanie procesów ETL (Pentaho, Alteryx, Tableau Prep)</li>
       <li>Konsultacje BI dla firm</li>
     </ul>
-    <h2>Kontakt</h2>
-    <p>Wybierz dogodny termin – pierwsza konsultacja gratis!</p>
-    <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Zarezerwuj przez Google Calendar</a>
+
+<section id="pl" class="active">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Cennik</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+      <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <h3 style="color: #00b3ff;">Szkolenie SQL</h3>
+        <p>od 1 800 zł / dzień</p>
+        <ul style="text-align: left; padding-left: 1.2rem;">
+          <li>Poziom: podstawowy-zaawansowany</li>
+          <li>Ćwiczenia praktyczne</li>
+          <li>Materiały PDF</li>
+        </ul>
+      </div>
+      <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <h3 style="color: #00b3ff;">Tableau & Dashboardy</h3>
+        <p>od 2 000 zł / dzień</p>
+        <ul style="text-align: left; padding-left: 1.2rem;">
+          <li>Tworzenie interaktywnych raportów</li>
+          <li>Projektowanie UX/UI</li>
+          <li>Dane rzeczywiste</li>
+        </ul>
+      </div>
+      <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        <h3 style="color: #00b3ff;">Konsultacje BI</h3>
+        <p>250 zł / godzina</p>
+        <ul style="text-align: left; padding-left: 1.2rem;">
+          <li>Analiza potrzeb</li>
+          <li>Wsparcie przy wdrożeniu</li>
+          <li>Optymalizacja raportów</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+      <h2>Kontakt</h2>
+	<p>Chcesz nawiązać współpracę, zorganizować szkolenie lub po prostu porozmawiać o danych?<p>
+	<p>Napisz do mnie:</p>
   </section>
+
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Formularz kontaktowy</h2>
+    <form style="display: grid; gap: 1rem; max-width: 600px; margin: 0 auto; text-align: left;">
+      <input type="text" name="name" placeholder="Imię i nazwisko" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;" />
+      <input type="email" name="email" placeholder="Adres e-mail" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;" />
+      <textarea name="message" placeholder="Wiadomość" rows="5" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;"></textarea>
+      <button type="submit" style="background: #00b3ff; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; cursor: pointer;">Wyślij wiadomość</button>
+    </form>
+ </div>
+ 
+</section>
+
+
 
   <section id="en">
     <h2>About Me</h2>
-    <p>My name is Jacek. I’ve been a Business Intelligence developer and trainer specializing in SQL, BI reporting, and data visualization for over X years.</p>
+    <p>I'm an experienced Business Intelligence professional passionate about data automation, integration, and modern analytics. I develop scalable reporting systems, deliver workshops, and build intelligent solutions that turn business needs into working systems. I value teamwork as much as autonomy and analytical precision.</p>
     <h2>Training Offerings</h2>
     <ul>
       <li>SQL from beginner to advanced</li>
-      <li>Reports and dashboards in Power BI, Tableau</li>
-      <li>ETL process design</li>
+      <li>Reports and dashboards in Tableau</li>
+      <li>ETL process design (Pentaho, Alteryx, Tableau Prep)</li>
       <li>BI consulting for companies</li>
     </ul>
+	
+<div style="max-width: 900px; margin: 0 auto; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Pricing</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      <h3 style="color: #00b3ff;">SQL Training</h3>
+      <p>from 1,800 PLN / day</p>
+      <ul style="text-align: left; padding-left: 1.2rem;">
+        <li>Level: beginner to advanced</li>
+        <li>Hands-on exercises</li>
+        <li>PDF materials</li>
+      </ul>
+    </div>
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      <h3 style="color: #00b3ff;">Tableau & Dashboards</h3>
+      <p>from 2,000 PLN / day</p>
+      <ul style="text-align: left; padding-left: 1.2rem;">
+        <li>Creating interactive reports</li>
+        <li>UX/UI design</li>
+        <li>Real-world data</li>
+      </ul>
+    </div>
+    <div style="background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      <h3 style="color: #00b3ff;">BI Consulting</h3>
+      <p>250 PLN / hour</p>
+      <ul style="text-align: left; padding-left: 1.2rem;">
+        <li>Needs analysis</li>
+        <li>Implementation support</li>
+        <li>Report optimization</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
     <h2>Contact</h2>
-    <p>Choose a convenient time – first consultation is free!</p>
-    <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book via Google Calendar</a>
+	<p>Looking for collaboration, a training session, or just want to talk data?</p>
+	<p>Feel free to reach out:</p>
+	
+	
+	
+<div style="max-width: 900px; margin: 0 auto; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Contact Form</h2>
+  <form style="display: grid; gap: 1rem; max-width: 600px; margin: 0 auto; text-align: left;">
+    <input type="text" name="name" placeholder="Full Name" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;" />
+    <input type="email" name="email" placeholder="Email Address" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;" />
+    <textarea name="message" placeholder="Message" rows="5" required style="padding: 0.75rem; border-radius: 8px; border: none; background: #2a2a2a; color: #eee;"></textarea>
+    <button type="submit" style="background: #00b3ff; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
+  </form>
+</div>
+
   </section>
+  
+
+
 
   <footer>
     <p>&copy; 2025 Jacek Wysopal</p>
     <p>
-      <a href="mailto:jacek@example.com">jacek@example.com</a> |
-      <a href="https://linkedin.com/in/jacek-wysopal">LinkedIn</a> |
-      <a href="https://github.com/wysopal">GitHub</a>
+      <a href="mailto:jacek.insightflow@gmail.com">E-mail</a> |
+      <a href="https://www.linkedin.com/in/jacek-wysopal-7528a2114/">LinkedIn</a> |
+      <a href="https://github.com/JacekWysopal">GitHub</a>
     </p>
   </footer>
 
