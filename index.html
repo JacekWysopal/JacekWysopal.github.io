@@ -35,6 +35,9 @@
       },
     };
   </script>
+  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body class="bg-white text-gray-900 dark:bg-zinc-900 dark:text-gray-200 font-sans transition duration-300">
 
@@ -83,12 +86,12 @@
   <main class="max-w-7xl mx-auto p-6">
   <section id="about" class="tab-section -ml-32">
     <div class="flex flex-col md:flex-row items-start gap-8">
-      <!-- Zdjęcie z lewej -->
+      
       <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-cyan-500 shadow-md flex-shrink-0">
         <img src="img/jacek.jpg" alt="Jacek Wysopal" class="object-cover w-full h-full">
       </div>
 
-      <!-- Nagłówek i tekst po prawej -->
+      
       <div class="flex flex-col text-lg leading-relaxed">
         <h2 class="text-2xl font-semibold mb-4" data-translate="headers.about"></h2>
         <p id="about-text"></p>
@@ -193,14 +196,14 @@
         subtitle: "Business Intelligence - treningi i konsultacje",
         nav: { about: "O mnie", training: "Szkolenia", pricing: "Cennik", portfolio: "Portfolio", contact: "Kontakt" },
         headers: { about: "O mnie", training: "Zakres szkoleń", pricing: "Cennik", portfolio: "Portfolio", contact: "Skontaktuj się ze mną" },
-        about: "Od ponad 8 lat specjalizuję się w Business Intelligence, wizualizacji danych i integracji systemów raportowych. Jestem ekspertem w Tableau i SQL (Oracle, Redshift, Athena, PostgreSQL, MSSQL, MariaDB, MongoDB), a także w narzędziach ETL takich jak Pentaho (również jako administrator serwera), Alteryx oraz Tableau Prep. Pracuję na co dzień w metodyce Agile/Scrum, wdrażam rozwiązania analityczne end-to-end, dbam o CI/CD z wykorzystaniem Jenkinsa i GITa. Uczyłem Tableau, SQL oraz Pythona w analizie danych jako wykładowca w największej szkole IT w Polsce. Dziś prowadzę autorskie szkolenia, pomagam firmom optymalizować procesy analityczne oraz mentoruję specjalistów na różnych poziomach zaawansowania. Moim celem jest maksymalizacja wartości płynącej z danych – praktycznie, efektywnie i zrozumiale.",
+        about: "Od ponad 8 lat specjalizuję się w Business Intelligence, wizualizacji danych i integracji systemów raportowych. Jestem ekspertem w Tableau i SQL (Oracle, Redshift, Athena, PostgreSQL, MSSQL, MariaDB, MongoDB), a także w narzędziach ETL takich jak Pentaho (również jako administrator serwera), Alteryx oraz Tableau Prep. Pracuję na co dzień w metodyce Agile/Scrum, wdrażam rozwiązania analityczne end-to-end, dbam o CI/CD z wykorzystaniem Jenkinsa i GITa. Uczyłem Tableau, SQL oraz Pythona w analizie danych jako wykładowca w największej szkole IT w Polsce. Dziś prowadzę autorskie szkolenia, pomagam firmom optymalizować procesy analityczne oraz mentoruję specjalistów na różnych poziomach zaawansowania. Moim celem jest maksymalizacja wartości płynącej z danych �?praktycznie, efektywnie i zrozumiale.",
 		training: [
 		  "SQL od podstaw do poziomu eksperckiego (Oracle, PostgreSQL, Redshift, MSSQL, Athena, MongoDB)",
 		  "Wizualizacja danych i dashboardy w Tableau (interaktywność, UX/UI, mapy, parametry, LOD)",
 		  "Procesy ETL: Pentaho (w tym administrowanie serwerem), Alteryx, Tableau Prep",
-		  "Python w analizie danych – dash, pandas, numpy, matplotlib",
+		  "Python w analizie danych �?dash, pandas, numpy, matplotlib",
 		  "DevOps w BI: Jenkins, GIT, CI/CD i zarządzanie wdrożeniami",
-		  "Szkolenia wewnętrzne i mentorskie – rozwój zespołów analitycznych"
+		  "Szkolenia wewnętrzne i mentorskie �?rozwój zespołów analitycznych"
 		],
 		pricing: [
 		  {
@@ -248,14 +251,14 @@
         subtitle: "Business Intelligence - trainings & consultations",
         nav: { about: "About me", training: "Trainings", pricing: "Pricing", portfolio: "Portfolio", contact: "Contact" },
         headers: { about: "About me", training: "Scope of training", pricing: "Pricing", portfolio: "Portfolio", contact: "Get in touch" },
-		about: "For over 8 years, I've specialized in Business Intelligence, data visualization, and integrated reporting systems. I'm an expert in Tableau and SQL (Oracle, Redshift, Athena, PostgreSQL, MSSQL, MariaDB, MongoDB), as well as ETL tools like Pentaho (including server administration), Alteryx, and Tableau Prep. I work daily in Agile/Scrum environments, building end-to-end analytics solutions, managing deployments via Jenkins and GIT. I’ve taught Tableau, SQL, and Python for data analysis at the largest IT training institution in Poland. Today, I deliver customized training sessions, consult with companies to optimize data processes, and mentor professionals at all levels. My goal is to help organizations extract maximum value from their data – efficiently, practically, and clearly.",
+		about: "For over 8 years, I've specialized in Business Intelligence, data visualization, and integrated reporting systems. I'm an expert in Tableau and SQL (Oracle, Redshift, Athena, PostgreSQL, MSSQL, MariaDB, MongoDB), as well as ETL tools like Pentaho (including server administration), Alteryx, and Tableau Prep. I work daily in Agile/Scrum environments, building end-to-end analytics solutions, managing deployments via Jenkins and GIT. I’ve taught Tableau, SQL, and Python for data analysis at the largest IT training institution in Poland. Today, I deliver customized training sessions, consult with companies to optimize data processes, and mentor professionals at all levels. My goal is to help organizations extract maximum value from their data �?efficiently, practically, and clearly.",
 		training: [
 		  "SQL from beginner to expert (Oracle, PostgreSQL, Redshift, MSSQL, Athena, MongoDB)",
 		  "Data visualization and dashboards in Tableau (interactivity, UX/UI, maps, parameters, LOD)",
 		  "ETL Processes: Pentaho (including server administration), Alteryx, Tableau Prep",
-		  "Python for data analysis – dash, pandas, numpy, matplotlib",
+		  "Python for data analysis �?dash, pandas, numpy, matplotlib",
 		  "DevOps in BI: Jenkins, GIT, CI/CD and deployment management",
-		  "Internal training & mentoring – developing analytics teams"
+		  "Internal training & mentoring �?developing analytics teams"
 		],
 		pricing: [
 		  {
@@ -376,5 +379,31 @@
     });
 
   </script>
+  
+<script>
+  emailjs.init('HoPSBdhErksF-Gp64'); 
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs.send("service_votej9p", "template_57fxzit", {
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(function(response) {
+      alert("Your message has been sent successfully!");
+      e.target.reset(); 
+    }, function(error) {
+      alert("An error occurred while sending your message. Please try again.");
+      console.error(error);
+    });
+  });
+</script>  
+  
+  
 </body>
 </html>
