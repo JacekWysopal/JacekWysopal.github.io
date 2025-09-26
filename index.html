@@ -84,20 +84,21 @@
 
   
   <main class="max-w-7xl mx-auto p-6">
-  <section id="about" class="tab-section md:ml-8 lg:ml-0">
-    <div class="flex flex-col md:flex-row items-start gap-8">
-      
-      <div class="w-80 h-80 rounded-full overflow-hidden shadow-md flex-shrink-0">
-        <img src="img/jacek.jpg" alt="Jacek Wysopal" class="object-cover w-full h-full">
-      </div>
 
-      
-      <div class="flex flex-col text-lg leading-relaxed">
-        <h2 class="text-2xl font-semibold mb-4" data-translate="headers.about"></h2>
-        <p id="about-text"></p>
-      </div>
+
+<section id="about" class="tab-section md:ml-8 lg:ml-0">
+  <div class="flex flex-col md:flex-row items-start gap-8 bg-zinc-100 dark:bg-zinc-800 p-8 rounded-2xl shadow-lg">
+    
+    <div class="w-80 h-80 rounded-full overflow-hidden shadow-md flex-shrink-0">
+      <img src="img/jacek.jpg" alt="Jacek Wysopal" class="object-cover w-full h-full">
     </div>
-  </section>
+
+    <div class="flex flex-col text-lg leading-relaxed max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4" data-translate="headers.about"></h2>
+      <div id="about-text"></div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -262,9 +263,15 @@
     const langData = {
       pl: {
         subtitle: "Business Intelligence - treningi i konsultacje",
-        nav: { about: "O mnie", training: "Szkolenia", pricing: "Cennik", portfolio: "Portfolio", contact: "Kontakt" },
-        headers: { about: "O mnie", training: "Zakres szkoleń", pricing: "Cennik", portfolio: "Portfolio", contact: "Skontaktuj się ze mną" },
-        about: "Od ponad 8 lat specjalizuję się w Business Intelligence, wizualizacji danych i integracji systemów raportowych. Jestem ekspertem w Tableau i SQL, a także w narzędziach ETL takich jak Pentaho, Alteryx oraz Tableau Prep. Na co dzień pracuję w metodyce Agile/Scrum, wdrażam rozwiązania analityczne end-to-end i dbam o CI/CD z wykorzystaniem Jenkinsa oraz GIT-a. Prowadziłem zajęcia z Tableau, SQL i Pythona w analizie danych jako wykładowca w największej szkole IT w Polsce. Obecnie pracuje jako Technical Lead w obszarze BI, tworzę autorskie poradniki oraz mentoruję specjalistów na różnych poziomach zaawansowania. Moim celem jest maksymalizacja wartości płynącej z danych – praktycznie, efektywnie i zrozumiale.",
+        nav: { about: "Kim jestem?", training: "Szkolenia", pricing: "Cennik", portfolio: "Portfolio", contact: "Kontakt" },
+        headers: { about: "Kim jestem?", training: "Zakres szkoleń", pricing: "Cennik", portfolio: "Portfolio", contact: "Skontaktuj się ze mną" },
+        about: ["Ekspertem w Tableau i SQL, a także w narzędziach ETL takich jak Pentaho, Alteryx oraz Tableau Prep.",
+				"Od ponad 8 lat specjalizuję się w Business Intelligence,  wizualizacji danych i systemach raportowych.",
+				"Na co dzień pracuję w metodyce Agile/Scrum, wdrażam rozwiązania analityczne end-to-end i dbam o CI/CD z wykorzystaniem Jenkinsa oraz GIT-a.",
+				"Prowadziłem zajęcia z Tableau, SQL i Pythona w analizie danych jako wykładowca w największej szkole IT w Polsce.",
+				"Obecnie pracuje jako Technical Lead w obszarze BI, tworzę autorskie poradniki oraz mentoruję specjalistów na różnych poziomach zaawansowania.",
+				"Moim celem jest maksymalizacja wartości płynącej z danych – praktycznie, efektywnie i zrozumiale."
+		],
 		training: [
 			"SQL od podstaw do poziomu eksperckiego (Oracle, PostgreSQL, Redshift, MSSQL, Athena, MongoDB)",
 			"Wizualizacja danych i dashboardy w Tableau (interaktywność, UX/UI, mapy, parametry, LOD)",
@@ -318,9 +325,16 @@
       },
       en: {
         subtitle: "Business Intelligence - trainings & consultations",
-        nav: { about: "About me", training: "Trainings", pricing: "Pricing", portfolio: "Portfolio", contact: "Contact" },
-        headers: { about: "About me", training: "Scope of training", pricing: "Pricing", portfolio: "Portfolio", contact: "Get in touch" },
-		about: "For over 8 years, I've specialized in Business Intelligence, data visualization, and integrated reporting systems. I'm an expert in Tableau and SQL, as well as ETL tools like Pentaho, Alteryx, and Tableau Prep. I work daily in Agile/Scrum environments, building end-to-end analytics solutions, managing deployments via Jenkins and GIT. I've taught Tableau, SQL, and Python for data analysis at the largest IT training institution in Poland. I’m currently a Technical Lead in BI. I create my own learning resources and mentor specialists with varying levels of experience. My goal is to help organizations extract maximum value from their data - efficiently, practically, and clearly.",
+        nav: { about: "Who am I?", training: "Trainings", pricing: "Pricing", portfolio: "Portfolio", contact: "Contact" },
+        headers: { about: "Who am I?", training: "Scope of training", pricing: "Pricing", portfolio: "Portfolio", contact: "Get in touch" },
+		about: [
+			"For over 8 years, I've specialized in Business Intelligence, data visualization, and reporting systems.",
+			"I'm an expert in Tableau and SQL, as well as ETL tools like Pentaho, Alteryx, and Tableau Prep.",
+			"I work daily in Agile/Scrum environments, building end-to-end analytics solutions, managing deployments via Jenkins and GIT.",
+			"I've taught Tableau, SQL, and Python for data analysis at the largest IT training institution in Poland.",
+			"I’m currently a Technical Lead in BI. I create my own learning resources and mentor specialists with varying levels of experience.",
+			"My goal is to help extract maximum value from data — efficiently, practically, and clearly."
+		],
 		training: [
 		  "SQL from beginner to expert (Oracle, PostgreSQL, Redshift, MSSQL, Athena)",
 		  "Data visualization and dashboards in Tableau (interactivity, UX/UI, maps, parameters, LOD)",
@@ -389,7 +403,17 @@
 
       document.documentElement.lang = lang;
       document.getElementById('subtitle').textContent = t.subtitle;
-      document.getElementById('about-text').textContent = t.about;
+	  
+// 🔹 obsługa akapitów w "about"
+const aboutContainer = document.getElementById('about-text');
+if (Array.isArray(t.about)) {
+  aboutContainer.innerHTML = t.about
+    .map((p, i) => `<p class="mb-3 ${i === 0 ? 'font-medium text-gray-800 dark:text-gray-100' : ''}">${p}</p>`)
+    .join('');
+} else {
+  aboutContainer.innerHTML = `<p class="mb-3">${t.about}</p>`;
+}
+
       document.getElementById('training-list').innerHTML = t.training.map(i => `<li>${i}</li>`).join('');
       
       document.getElementById('pricing-cards').innerHTML = t.pricing.map(p => `
