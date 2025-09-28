@@ -75,7 +75,8 @@
     <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="about" data-translate="nav.about"></button>
     <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="training" data-translate="nav.training"></button>
     <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="pricing" data-translate="nav.pricing"></button>
-    <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="portfolio" data-translate="nav.portfolio"></button>
+   <!--  <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="portfolio" data-translate="nav.portfolio"></button> --> 
+    <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="certificates" data-translate="nav.certificates"></button>
     <button class="tab-btn border-b-2 border-transparent hover:border-sky-600 pb-1" data-tab="contact" data-translate="nav.contact"></button>
   </nav>
 
@@ -114,21 +115,22 @@
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="pricing-cards"></div>
     </section>
 
+<!-- 
 <section id="portfolio" class="tab-section hidden">
   <h2 class="text-2xl font-semibold mb-6" data-translate="headers.portfolio"></h2>
 
-  <!-- Kategorie -->
+  <!-- Kategorie 
   <div class="flex justify-center gap-4 mb-6">
     <button class="filter-btn border px-3 py-1 rounded bg-sky-600 text-white" data-category="tableau">Tableau</button>
     <button class="filter-btn border px-3 py-1 rounded" data-category="powerbi">Power BI</button>
-  <!--  <button class="filter-btn border px-3 py-1 rounded" data-category="streamlit">Streamlit</button> -->
+  <button class="filter-btn border px-3 py-1 rounded" data-category="streamlit">Streamlit</button>
   </div>
 
   <div class="swiper portfolio-swiper">
     <div class="swiper-wrapper">
      
       <!-- Tableau -->
-      <div class="swiper-slide" data-category="tableau">
+  <!--     <div class="swiper-slide" data-category="tableau">
         <a href="https://public.tableau.com/views/Adelaide-BusCommunicationAnalysis/Adelaide-BusStops?:language=en-US" target="_blank" rel="noopener noreferrer">
           <div class="relative w-full h-80 bg-zinc-200 dark:bg-zinc-800 rounded-lg overflow-hidden group">
             <img src="img/Tableau_Adelaide.jpg" alt="Tableau project" class="w-full h-full object-cover">
@@ -140,20 +142,20 @@
       </div>
 
       <!-- Tableau Placeholder 1 -->
-      <div class="swiper-slide" data-category="tableau">
+  <!--     <div class="swiper-slide" data-category="tableau">
         <div class="relative w-full h-80 bg-zinc-200 dark:bg-zinc-800 rounded-lg overflow-hidden">
           <img src="https://placehold.co/600x400/334155/ffffff?text=Tableau+Project" class="w-full h-full object-cover" alt="Tableau placeholder">
         </div>
       </div>
 
       <!-- Tableau Placeholder 2 -->
-      <div class="swiper-slide" data-category="tableau">
+  <!--     <div class="swiper-slide" data-category="tableau">
         <div class="relative w-full h-80 bg-zinc-200 dark:bg-zinc-800 rounded-lg overflow-hidden">
           <img src="https://placehold.co/600x400/334155/ffffff?text=Tableau+Project" class="w-full h-full object-cover" alt="Tableau placeholder">
         </div>
       </div>
 
-<!-- Power BI -->
+<!-- Power BI 
 <div class="swiper-slide" data-category="powerbi">
   <a href="https://app.powerbi.com/view?r=eyJrIjoiNjY5ZDJkZmUtODRjMy00ZTQ1LTkxYzYtMDUzYzlmOGNmYzk3IiwidCI6IjA0YTFmZWIxLThjM2ItNDc2Yy04ZTIxLWZjNWQxZjY5NzY4NSJ9" target="_blank" rel="noopener noreferrer">
     <div class="relative w-full h-80 bg-zinc-200 dark:bg-zinc-800 rounded-lg overflow-hidden group">
@@ -184,7 +186,7 @@
     </div>
   </a>
 </div>
--->
+
 
 
     </div>
@@ -194,6 +196,8 @@
   </div>
 </section>
 
+-->
+<!--
 <script>
 
   // Filtrowanie portfolio
@@ -225,9 +229,45 @@
     document.querySelector(`.filter-btn[data-category="${defaultCategory}"]`).click();
   });
 </script>
+-->
 
 
+<!-- 🔹 Sekcja CERTYFIKATY --> <section id="certificates" class="tab-section hidden">
+ <div class="flex items-center justify-center gap-3 mb-6">
+ <span class="text-3xl">🎓</span>
+ <h2 class="text-2xl font-semibold" data-translate="headers.certificates"></h2> 
+ </div>
+ <p id="cert-intro" class="mb-6 text-center text-lg text-gray-700 dark:text-gray-300"></p> 
+ 
+ <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+ 
+ <!-- 🔹 Certyfikat 1 -->
+ <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-xl shadow hover:shadow-xl transition flex justify-center"> 
+ <div data-iframe-width="300" data-iframe-height="300" data-share-badge-id="ba3961f2-2e73-4cf4-b77a-7e9e6e987498" data-share-badge-host="https://www.credly.com">
+ </div>
+ </div> 
+ 
+ <!-- 🔹 Certyfikat 2 (zmień ID na własny) --> 
+ <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-xl shadow hover:shadow-xl transition flex justify-center"> 
+ <div data-iframe-width="300" data-iframe-height="300" data-share-badge-id="e6ffa5ca-1751-421c-bd7b-6df9099ca7d8" data-share-badge-host="https://www.credly.com"> 
+ </div> 
+ </div> 
+ 
+ <!-- 🔹 Certyfikat 3 (zmień ID na własny) -->
+ <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-xl shadow hover:shadow-xl transition flex justify-center"> 
+ <div data-iframe-width="300" data-iframe-height="300" data-share-badge-id="c5e119d1-39e9-432a-ac83-8c0172545b36" data-share-badge-host="https://www.credly.com"> 
+ </div> 
+ </div> 
+ 
+ </div> 
+ 
+ </section>
 
+
+<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>	
+	
+	
+	
     <section id="contact" class="tab-section hidden">
       <h2 class="text-2xl font-semibold mb-4" data-translate="headers.contact"></h2>
       <p id="contact-intro" class="mb-6 text-center"></p>
@@ -249,6 +289,7 @@
         </form>
       </div>
     </section>
+	
   </main>
 
   <footer class="text-center text-sm text-gray-500 dark:text-gray-400 p-6 mt-8">
@@ -264,8 +305,8 @@
     const langData = {
       pl: {
         subtitle: "Business Intelligence - treningi i konsultacje",
-        nav: { about: "Kim jestem?", training: "Szkolenia", pricing: "Cennik", portfolio: "Portfolio", contact: "Kontakt" },
-        headers: { about: "Kim jestem?", training: "Zakres szkoleń", pricing: "Cennik", portfolio: "Portfolio", contact: "Skontaktuj się ze mną" },
+        nav: { about: "Kim jestem?", training: "Szkolenia", pricing: "Cennik", portfolio: "Portfolio", certificates: "Certyfikaty", contact: "Kontakt" },
+        headers: { about: "Kim jestem?", training: "Zakres szkoleń", pricing: "Cennik", portfolio: "Portfolio", certificates: "Certyfikaty", contact: "Skontaktuj się ze mną" },
         about: ["Ekspertem w Tableau i SQL, a także w narzędziach ETL takich jak Pentaho, Alteryx oraz Tableau Prep.",
 				"Od ponad 8 lat specjalizuję się w Business Intelligence,  wizualizacji danych i systemach raportowych.",
 				"Na co dzień pracuję w metodyce Agile/Scrum, wdrażam rozwiązania analityczne end-to-end i dbam o CI/CD z wykorzystaniem Jenkinsa oraz GIT-a.",
@@ -319,15 +360,15 @@
 			  "Praktyczne warsztaty krok po kroku"
 			]
 		  }
-		]
-,
+		],
+		certificates: { intro: "Poniżej znajdziesz moje certyfikaty potwierdzające umiejętności w obszarze Business Intelligence." },
         contact: "Chcesz nawiązać współpracę, zorganizować szkolenie dla swojego zespołu lub po prostu porozmawiać o danych? Wypełnij formularz, a ja odezwę się do Ciebie.",
         form: { name: "Imię i nazwisko", email: "Adres e-mail", message: "Twoja wiadomość", send: "Wyślij wiadomość", nameLabel: "Imię i nazwisko", emailLabel: "E-mail", messageLabel: "Wiadomość" }
       },
       en: {
         subtitle: "Business Intelligence - trainings & consultations",
-        nav: { about: "Who am I?", training: "Trainings", pricing: "Pricing", portfolio: "Portfolio", contact: "Contact" },
-        headers: { about: "Who am I?", training: "Scope of training", pricing: "Pricing", portfolio: "Portfolio", contact: "Get in touch" },
+        nav: { about: "Who am I?", training: "Trainings", pricing: "Pricing", portfolio: "Portfolio", certificates: "Certificates", contact: "Contact" },
+        headers: { about: "Who am I?", training: "Scope of training", pricing: "Pricing", portfolio: "Portfolio", certificates: "Certificates", contact: "Get in touch" },
 		about: [
 			"For over 8 years, I've specialized in Business Intelligence, data visualization, and reporting systems.",
 			"I'm an expert in Tableau and SQL, as well as ETL tools like Pentaho, Alteryx, and Tableau Prep.",
@@ -383,6 +424,7 @@
 			]
 		  }
 		],
+		certificates: { intro: "Here you can find my certificates validating skills in Business Intelligence." },
         contact: "Want to collaborate, organize a training for your team, or just talk about data? Fill out the form, and I will get back to you.",
         form: { name: "Full name", email: "Email address", message: "Your message", send: "Send message", nameLabel: "Full name", emailLabel: "Email", messageLabel: "Message" }
       }
@@ -404,6 +446,7 @@
 
       document.documentElement.lang = lang;
       document.getElementById('subtitle').textContent = t.subtitle;
+	  document.getElementById('cert-intro').textContent = langData[lang].certificates.intro;
 	  
 // 🔹 obsługa akapitów w "about"
 const aboutContainer = document.getElementById('about-text');
@@ -423,7 +466,9 @@ if (Array.isArray(t.about)) {
           <p class="mb-4 font-medium text-lg">${p.price}</p>
           <ul class="list-disc pl-5 text-sm space-y-1">${p.details.map(d => `<li>${d}</li>`).join('')}</ul>
         </div>`).join('');
+		
       
+	  
       document.getElementById('contact-intro').textContent = t.contact;
       document.getElementById('name').placeholder = t.form.name;
       document.getElementById('email').placeholder = t.form.email;
